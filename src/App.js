@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import { ReactComponent as DgLogo } from './images/DG_Logo_Watermark.svg';
+import ApplicationCard from './AppCard.js';
+import { applications } from './applications.js';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <div>
+        <header>
+          <div style={{ padding: '1.5em' }}>
+            <DgLogo className="dg-logo" />
+          </div>
+          <div className="title"><h1>GBDX Product Suite</h1></div>
         </header>
+        <div className="grid-container">
+          {
+            applications.map( application => {
+              return (
+                <ApplicationCard 
+                  svg={application.svg}              
+                  title={application.title}
+                  copy={application.copy}
+									link={application.link}
+                />   
+              )
+            }) 
+          }
+        </div>
       </div>
     );
   }

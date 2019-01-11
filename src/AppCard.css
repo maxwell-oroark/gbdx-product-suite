@@ -1,0 +1,10 @@
+.app-card {
+  border: 1px solid var(--dg-shade-light);
+  color: var(--dg-shade-light);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 350px;
+  padding: 0 2em;
+}
