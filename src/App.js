@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { ReactComponent as DgLogo } from './images/DG_Logo_Watermark.svg';
 import ApplicationCard from './AppCard.js';
 import { applications } from './applications.js';
@@ -10,7 +9,7 @@ class App extends Component {
     return (
       <div>
         <header>
-          <div style={{ padding: '1.5em' }}>
+          <div>
             <DgLogo className="dg-logo" />
           </div>
           <div className="title"><h1>GBDX Product Suite</h1></div>

@@ -13,6 +13,12 @@ body {
 
 }
 
+@media (max-width: 1000px) {
+  .grid-container {
+    grid-template-columns: 1fr; 
+  }
+}
+
 .title {
   color: var(--dg-shade-light);
   display:flex;
@@ -27,5 +33,18 @@ body {
 
 header {
   display: grid;
+  margin: 2em;
   grid-template-columns: 25% 50% 25%;
+}
+
+@media( max-width: 1000px ){
+  header {
+    grid-template-columns: 50% 50%;
+  }
+  .title {
+    justify-content: flex-end; 
+  }
+  h1 {
+    font-size: 35px 
+  }
 }
